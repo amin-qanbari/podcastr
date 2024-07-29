@@ -1,0 +1,35 @@
+import Image from "next/image";
+
+interface PodcastCardProps {
+  imgUrl: string;
+  title: string;
+  description: string;
+  podcastId: number;
+}
+
+const PodcastCard = ({
+  imgUrl,
+  title,
+  description,
+  podcastId,
+}: PodcastCardProps) => {
+  return (
+    <div className="cursor-pointer">
+      <figure className="flex flex-col gap-2">
+        <Image
+          src={imgUrl}
+          alt="title"
+          height={174}
+          width={174}
+          className="aspect-square w-full h-fit rounded-xl 2xl:size-[200px]"
+        />
+        <div className="flex flex-col">
+          <h1 className="text-16 truncate font-bold text-white-1">{title}</h1>
+          <h2 className="text-12 truncate text-white-4">{description}</h2>
+        </div>
+      </figure>
+    </div>
+  );
+};
+
+export default PodcastCard;

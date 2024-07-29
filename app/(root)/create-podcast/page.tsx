@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
 
 const CreatePodcast = () => {
   return (
-    <div>CreatePodcast</div>
-  )
-}
+    <div>
+      <h1 className="text-20 font-bold text-white-1 capitalize">
+        CreatePodcast
+      </h1>
+    </div>
+  );
+};
 
-export default CreatePodcast
+export default CreatePodcast;
